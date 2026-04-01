@@ -3,25 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0b; 
+  --foreground: #ededed;
+  --card: #131417;       
+  --card-foreground: #ededed;
+  --popover: #131417;
+  --popover-foreground: #ededed;
+  --primary: #22c55e;
+  --primary-foreground: #000000;
+  --secondary: #1f2025;
+  --secondary-foreground: #ededed;
+  --muted: #1f2025;
+  --muted-foreground: #a1a1aa;
+  --accent: #1f2025;
+  --accent-foreground: #ededed;
+  --destructive: #ef4444; 
+  --destructive-foreground: #ededed;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #22c55e;
+  --radius: 0.75rem;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .glass {
+    @apply bg-card/80 backdrop-blur-md border border-border;
   }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
 }

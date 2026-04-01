@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 "use client";
 
 import { Card, CardHeader, CardTitle } from "@/components/Card";

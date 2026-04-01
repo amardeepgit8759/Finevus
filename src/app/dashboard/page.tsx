@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { Card, CardHeader, CardTitle } from "@/components/Card";
 import { DashboardChart } from "@/components/DashboardChart";
 import { RecentTransactions } from "@/components/RecentTransactions";

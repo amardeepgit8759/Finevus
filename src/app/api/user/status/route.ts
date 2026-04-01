@@ -7,6 +7,9 @@ const prisma = new PrismaClient();
 
 export async function GET() {
   const { userId } = await auth();
+  
+  // Guard: If no userId, we are either unauthorized or in a build-time static generation phase.
+  // We return a 401 immediately to prevent any database or Clerk logic from executing.
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   try {

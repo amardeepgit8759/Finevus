@@ -1,5 +1,5 @@
-export const dynamic = "force-dynamic";
 "use client";
+export const dynamic = "force-dynamic";
 
 import { Card, CardHeader, CardTitle } from "@/components/Card";
 import { Plus, ArrowUpRight, ArrowDownRight, Bitcoin, LineChart, Loader2 } from "lucide-react";

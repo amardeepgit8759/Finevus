@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
-import { razorpay } from '@/lib/razorpay';
+import { getRazorpay } from '@/lib/razorpay';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -10,6 +10,13 @@ export async function POST() {
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+
+  const razorpay = getRazorpay();
+  if (!razorpay) {
+    console.error("Razorpay instance not created (Missing keys). Returning safe fallback.");
+    return NextResponse.json({ error: 'Razorpay not configured' }, { status: 200 });
+  }
+
 
   try {
     const user = await prisma.user.findUnique({

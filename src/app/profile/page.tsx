@@ -1,21 +1,19 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useUser, useClerk } from "@clerk/nextjs";
 import { 
   Mail, 
   Shield, 
   Bell, 
-  CheckCircle2, 
   Crown, 
   User as UserIcon,
   ChevronRight,
-  ExternalLink,
   ShieldCheck,
   Lock,
   Loader2
 } from "lucide-react";
-import { Card, CardHeader, CardTitle } from "@/components/Card";
+import { Card } from "@/components/Card";
 import { SettingItem } from "@/components/profile/SettingItem";
 import { Toggle } from "@/components/ui/Toggle";
 import { EditProfileModal } from "@/components/profile/EditProfileModal";

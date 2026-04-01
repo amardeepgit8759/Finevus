@@ -1,5 +1,4 @@
 import { Card, CardHeader, CardTitle } from "@/components/Card";
-import { ArrowDownRight, ArrowUpRight, DollarSign, TrendingUp, Wallet } from "lucide-react";
 import { DashboardChart } from "@/components/DashboardChart";
 import { RecentTransactions } from "@/components/RecentTransactions";
 import { AIInsightCard } from "@/components/AIInsightCard";
